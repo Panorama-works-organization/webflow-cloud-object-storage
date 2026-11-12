@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "astro",
+  "name": "videos-app",
   "main": "./dist/_worker.js/index.js",
   "compatibility_date": "2025-04-15",
   "compatibility_flags": ["nodejs_compat"],
@@ -14,7 +14,7 @@
   "r2_buckets": [
     {
       "binding": "CLOUD_FILES",
-      "bucket_name": "cloud-files"
+      "bucket_name": "videos"
     }
   ]
 }
