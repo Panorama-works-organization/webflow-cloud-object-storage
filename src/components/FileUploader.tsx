@@ -135,7 +135,7 @@ export default function FileUploader({ mountPath = "/" }: FileUploaderProps) {
       }
 
       setProgress(100);
-      alert("File uploaded successfully!");
+      alert("Archivo subido!");
       loadFiles();
     } catch (error) {
       console.error("Upload failed:", error);
@@ -262,7 +262,7 @@ export default function FileUploader({ mountPath = "/" }: FileUploaderProps) {
           color: "#333",
         }}
       >
-        File Upload Demo
+        Subir archivo
       </h2>
 
       {/* Upload Mode Toggle */}
@@ -288,7 +288,7 @@ export default function FileUploader({ mountPath = "/" }: FileUploaderProps) {
             transition: "all 0.3s ease",
           }}
         >
-          Simple Upload
+          Subir archivo simple
         </button>
         <button
           onClick={() => setUploadMode("multipart")}
@@ -304,7 +304,7 @@ export default function FileUploader({ mountPath = "/" }: FileUploaderProps) {
             transition: "all 0.3s ease",
           }}
         >
-          Multipart Upload
+          Subir archivo multi-part
         </button>
       </div>
 
@@ -396,10 +396,10 @@ export default function FileUploader({ mountPath = "/" }: FileUploaderProps) {
                   animation: "spin 1s linear infinite",
                 }}
               ></div>
-              Uploading...
+              Subiendo...
             </span>
           ) : (
-            `Upload File (${uploadMode === "simple" ? "Simple" : "Multipart"})`
+            `Subir (${uploadMode === "simple" ? "Simple" : "Multipart"})`
           )}
         </button>
 
@@ -437,7 +437,7 @@ export default function FileUploader({ mountPath = "/" }: FileUploaderProps) {
                 fontWeight: "500",
               }}
             >
-              Upload Progress: {Math.round(progress)}%
+              Progreso: {Math.round(progress)}%
             </p>
           </div>
         )}
@@ -468,7 +468,7 @@ export default function FileUploader({ mountPath = "/" }: FileUploaderProps) {
               margin: 0,
             }}
           >
-            Uploaded Files
+            Archivos subidos
           </h3>
           <button
             onClick={loadFiles}
@@ -485,7 +485,7 @@ export default function FileUploader({ mountPath = "/" }: FileUploaderProps) {
               transition: "all 0.3s ease",
             }}
           >
-            {loading ? "Loading..." : "Refresh"}
+            {loading ? "Cargando..." : "Actualizar"}
           </button>
         </div>
 
@@ -502,12 +502,12 @@ export default function FileUploader({ mountPath = "/" }: FileUploaderProps) {
                 margin: "0 auto 1rem",
               }}
             ></div>
-            <p style={{ color: "#666", margin: 0 }}>Loading files...</p>
+            <p style={{ color: "#666", margin: 0 }}>Cargando archivos...</p>
           </div>
         ) : files.length === 0 ? (
           <div style={{ textAlign: "center", padding: "2rem" }}>
             <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>📁</div>
-            <p style={{ color: "#666", margin: 0 }}>No files uploaded yet</p>
+            <p style={{ color: "#666", margin: 0 }}>Todavía no hay archivos</p>
             <p
               style={{
                 color: "#999",
@@ -515,7 +515,7 @@ export default function FileUploader({ mountPath = "/" }: FileUploaderProps) {
                 margin: "0.5rem 0 0 0",
               }}
             >
-              Upload some files to get started
+              Sube algun archivo para comenzar
             </p>
           </div>
         ) : (
